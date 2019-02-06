@@ -1,0 +1,15 @@
+<p id="p1">Initial content</p>
+<input type="button" value="sort" onclick="sort()">
+<input type="button" value="populating array" onclick="readArray()">
+<script>
+    var elements=[100,'hello',30.7,40,true,20];
+    function readArray()
+    {
+        document.getElementById('p1').innerHTML=elements.join(",");
+    }
+    function sort()
+    {
+        elements.sort();
+        readArray();
+    }
+</script>

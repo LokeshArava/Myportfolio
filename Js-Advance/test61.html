@@ -1,0 +1,19 @@
+<p id="p1">inital content</p>
+From Which Index:<input type="text" id="from"><br>
+Element to be removed:<input type="text" id="total"><br>
+<input type="button" value="remove" onclick="remove()">
+<input type="button" value="populate array conent" onclick="read()">
+<script>
+    var Element=[100,"hello",30.4,true,20];
+    function read()
+    {
+        document.getElementById("p1").innerHTML=Element.join(",");
+    }
+    function remove()
+    {
+        var from=document.getElementById("from").value;
+        var total=document.getElementById("total").value;
+        Element.splice(from,total);
+        read();
+    }
+</script>

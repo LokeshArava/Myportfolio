@@ -1,0 +1,44 @@
+<form ac<tion="success.html">
+    Usermame:<input type="text" name="username">
+    <span id="userError"></span><br>
+    Password:<input type="password" name="password">
+    <span id="passwordError"></span><br>
+    <input type="submit" value="Submit" onclick="return validate()">
+</form>
+<script>
+    function validate()
+    {
+        var thisForm=document.forms[0];
+        var username=thisForm.username;
+        var usernameStatus;
+        var v1=document.getElementById("userError");
+        if(usernameStatus=(username.value.length==0))
+        {
+            v1.style.color="red";
+            v1.innerHTML="Enter username";
+        }
+        else
+        {
+            v1.innerHTML="";
+        }
+        var Password=thisForm.Password;
+        var passwordstatus;
+        var v2=document.getElementById("passwordError");
+        if(passwordstatus= (Password.value.length==0))
+        {
+            v2.style.color="red";
+            v2.innerHTML="Enter password";
+        }
+        if(usernameStatus)
+        {
+            username.focus();
+            Password.value="";
+            return false;
+        }
+        else if(passwordstatus)
+        {
+            password.focus();
+            return false;
+        }
+    }
+</script>

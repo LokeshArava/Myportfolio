@@ -1,0 +1,12 @@
+<p id="p1">initial para1</p>
+<p id="p2">initial para2</p>
+<input type="button" value="swap" onclick="swap()">
+<script>
+    function swap()
+    {
+    var v1=document.getElementById('p1').innerHTML;
+    var v2=document.getElementById('p2').innerHTML;
+    document.getElementById('p1').innerHTML=v2;
+    document.getElementById('p2').innerHTML=v1;
+    }
+</script>

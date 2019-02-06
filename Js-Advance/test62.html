@@ -1,0 +1,19 @@
+<p id="p1">inital content</p>
+New Element:<input type="text" id="newelement"><br>
+Location:<input type="text" id="location"><br>
+<input type="button" value="remove" onclick="insert()">
+<input type="button" value="populate array conent" onclick="read()">
+<script>
+    var Element=[100,"hello",30.4,true,20];
+    function read()
+    {
+        document.getElementById("p1").innerHTML=Element.join(",");
+    }
+    function insert()
+    {
+        var newelement=document.getElementById("newelement").value;
+        var index=document.getElementById("location").value;
+        Element.splice(index,0,newelement);
+        read();
+    }
+</script>

@@ -1,0 +1,16 @@
+<p id="p1">Initial content</p>
+<input type="button" value="populate array" onclick="readArray()">
+<script>
+    var elements=["abc",300,"hello",true,"xyz"];
+    var str="";
+    function readArray()
+    {
+        elements.forEach(iterateElements);
+        document.getElementById("p1").innerHTML=str;
+    }
+    function iterateElements(element,index,array)
+    {
+        alert(element+":"+index+":("+array+")");
+        str +=element+",";
+    }
+</script>

@@ -1,0 +1,15 @@
+<p id="p1">initial content</p>
+<input type="button" value="populate array" onclick="readArray()">
+<input type="button" value="add new" onclick="add()">
+<script>
+    var element=[100,"hello",true,3.4,20];
+    function readArray()
+    {
+        document.getElementById('p1').innerHTML=element.join(",");
+    }
+    function add()
+    {
+        element.push(43,25);
+        readArray();
+    }
+</script>

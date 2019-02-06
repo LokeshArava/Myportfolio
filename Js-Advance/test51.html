@@ -1,0 +1,23 @@
+<p id="p1">initail data</p>
+<input type="button" value="print obj" onclick="printObj()">
+<script>
+    function printObj()
+    {
+        var emp={
+            firstName:"vijay",
+            lastName:"Rao",
+            
+        };
+        emp["age"]=22;
+        emp["weight"]=65.6;
+        emp['permanent']=true;
+        emp["lastName"]="ARAVA";
+        var empData=
+        emp["firstName"]+","+
+        emp["lastName"]+","+
+        emp["age"]+","+
+        emp["weight"]+","+
+        emp["permanent"];
+        document.getElementById("p1").innerHTML=empData;
+    }
+</script>

@@ -1,0 +1,27 @@
+<form action="success.html" name="form1">
+    Gender:
+    <input type="radio" name="gender" value="m">male &nbsp;&nbsp;
+    <input type="radio" name="gender" value="f">female <br>
+    <input type="submit" value="sumbit" onclick="return validate()">
+</form>
+><script>
+    function validate()
+    {
+        var thisform=document.form1;
+        var gender=thisform.gender;
+        for(var i=0;i<gender.length;i++)
+        {
+            if(gender[i].checked)
+            {
+                status=true;
+                break;
+            }
+        }
+        if(!status)
+        {
+            alert("select gender");
+            gender[0].focus();
+            return false;
+        }
+    }
+</script>

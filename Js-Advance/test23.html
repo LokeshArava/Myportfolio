@@ -1,0 +1,17 @@
+<form>
+    First Name:
+    <input type="text" name="firstname" ><br>
+    First Name Again:
+    <input type="text" name="firstnameAgain"><br>
+    <input type="button" value="submit" onclick="copytoAnother()">
+</form>
+<script>
+    function copytoAnother()
+    {
+        var f1=document.forms[0];
+        var firstname=f1.firstname;
+        var firstnameAgain=f1.firstnameAgain;
+        firstnameAgain.value=firstname.value;
+    }
+
+</script>

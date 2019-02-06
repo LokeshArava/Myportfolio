@@ -1,0 +1,44 @@
+<form action="success.html">
+    First Name:<input type="text" name="firstname">
+    <span id="firstnameerror"></span><br>
+    Last Name:<input type="text" name="lastname">
+    <span id="lastnameerror"></span><br>
+    Age:<input type="text" name="age">
+    <span id="ageerror"></span><br>
+    <input type="submit" value="Submit" onclick="return validate()">
+    
+</form>
+<script>
+    function validate()
+    {
+        var thisForm=document.forms[0];
+        var firstname=thisForm.firstname;
+        var firstnameerrorstatus;
+        if(firstnameerrorstatus=(firstname.value.length==0))
+        {
+            var v1=document.getElementById("firstnameerror");
+            v1.style.color="red";
+            v1.innerHTML="Enter the firstname";
+        }
+        var lastname=thisForm.lastname;
+        var lastnamestatus;
+        if(lastnamestatus=(lastname.value.length==0))
+        {
+            v2=document.getElementById("lastnameerror");
+            v2.style.color="red";
+            v2.innerHTML="enter the lastname";
+        }
+        var age=thisForm.age;
+        var agestatus;
+        if(agestatus=(age.value.length==0))
+        {
+            v3=document.getElementById("ageerror");
+            v3.style.color="red";
+            v3.innerHTML="enter age";
+        }
+        if(firstnameerrorstatus || lastnamestatus || agestatus)
+        {
+            return false;
+        }
+    }
+</script>

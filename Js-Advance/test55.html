@@ -1,0 +1,9 @@
+<p id="p1">initial content</p>
+<input type="button" value="populate array" onclick="readyArray()">
+<script>
+    function readyArray()
+    {
+        var elements=[100,'hello',30.7,20];
+        document.getElementById("p1").innerHTML=elements.join(",");
+    }
+</script>

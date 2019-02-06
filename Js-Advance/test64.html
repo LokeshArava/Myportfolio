@@ -1,0 +1,17 @@
+<p id="p1">Initial content</p>
+<input type="button" value="leftShift" onclick="Shifting()">
+<input type="button" value="populate array"onclick="readArray()">
+
+<script>
+    var elements=[100,"hello",30.7,40,true,20];
+    function readArray()
+    {
+        document.getElementById("p1").innerHTML=elements.join(",");
+    }
+    function Shifting()
+    {
+        var element=elements.shift();
+        alert(element);
+        readArray();
+    }
+</script>

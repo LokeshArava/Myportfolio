@@ -1,0 +1,14 @@
+<p id="p1">initial content</p>
+<input type="button" value="populate array content" onclick="readyArray()">
+<script>
+    function readyArray()
+    {
+        var element=[100,2000,300,40,true,5,20];
+        var str='';
+        for(var i=0;i<element.length;i++)
+        {
+            str +=element[i]+",";
+        }
+        document.getElementById("p1").innerHTML=str;
+    }
+</script>

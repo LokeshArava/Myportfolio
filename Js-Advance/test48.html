@@ -1,0 +1,58 @@
+<form>
+    Email:
+    <input type="text" name="email">
+    <span style="color:red" id="emialerror"></span>
+    <br>
+    <input type="button" onclick="validate()" value="validate">
+</form>
+<script>
+    function validate()
+    {
+        var value=document.forms[0].email.value;
+        var emialerror=document.getElementById("emialerror");
+        emialerror.innerHTML="";
+        //check @ occurance
+        var atIndex=value.indexOf('@');
+        if(atIndex==-1)
+        {
+            emialerror.innerHTML=value+"should contain @";
+        }
+        //check multiple @ occurences
+        var secondAt=validate.indexOf('@',atIndex+1);
+        if(secondAt !=-1)
+        {
+            emialerror.innerHTML=value+"should not contain multiple @";
+        }
+        
+        //check dot occurance after @
+        var dotIndex=value.indexOf('.',atIndex+1);
+        if(dotIndex==-1)
+        {
+            emialerror.innerHTML=value+"min one dot after @";
+        }
+        // check for invalid occurances like .@ ||@.|| ..
+        if(value.indexOf(".@")!=-1 || value.indexOf("@.")!=-1 ||value.indexOf("..")!=-1)
+        {
+            emialerror.innerHTML=value+"invalid occurances like .@ || @. || ..";
+        }
+        //first and last chars should be only alphabets
+        //[a-z]==> 97 to 122
+        //[A-Z]==> 65 to 90
+        var firstcharAscii= value.charCodeAt(0);
+        if(! (
+            (firstcharAscii >=97 && firstcharAscii <=122) ||
+            (firstcharAscii >=65 && firstcharAscii <=90))
+            )
+            {
+                emialerror.innerHTML=value+"should start with only alphabets";
+            }
+            var lastCharascii= value.charCodeAt(value.length-1);
+            if(!(
+                (lastCharascii >=97 && lastCharascii <= 122) ||
+                (lastCharascii >=65 && lastCharascii <=90))
+            )
+            {
+                emialerror.innerHTML=value+"should end with only alphabets";
+            }
+    }
+</script>

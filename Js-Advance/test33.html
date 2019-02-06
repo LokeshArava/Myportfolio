@@ -1,0 +1,23 @@
+<div id="d1">
+    iam from div1 <br>
+    iam from div1 <br>
+    iam from div1 <br>
+</div>
+<hr>
+<div id="d2">
+    iam from div2 <br>
+    iam from div2 <br>
+</div>
+<hr>
+<span id="s1">
+  iam from span <br>
+  iam from span <br>
+</span>
+<input type="button" value="Button"  onclick="read()">
+<script>
+    function read()
+    {
+        alert(document.getElementById("d1").innerHTML);
+        alert(document.getElementById("s1").innerHTML);
+    }
+</script>

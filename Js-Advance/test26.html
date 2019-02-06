@@ -1,0 +1,17 @@
+
+        <form onload="focusfield()"> 
+            FirstName:<input type="text" name="firstname"><br>
+            lastName:<input type="text" name="lastname"><br>
+            ...........<br>
+            ...........<br>
+        
+        </form>
+        <script>
+            function focusfield()
+            {
+                document.forms[0].firstname.focus();
+            }
+        </script>
+        <!--
+            onload event is only for body tag,not the form tag
+        -->

@@ -1,0 +1,35 @@
+<form>
+    First Name:<input type="text" name="firstname"><br>
+    <input type="button" value="check Methods" onclick="experimentMethods()">
+
+</form>
+<script>
+    function experimentMethods()
+    {
+        var value=document.forms[0].firstname.value;
+        var length=value.length;
+        console.log("Length:"+length);
+        var firstChar= value.charAt(0);
+        console.log("First Char:"+firstChar);
+        var lastChar=value.charAt(length-1);
+        console.log("last Char:"+lastChar);
+        var indexOfFirstSpace=value.indexOf(' ');
+        console.log("Location of First Space:"+indexOfFirstSpace);
+        var indexOfA= value.indexOf('A');
+        console.log("Location of First A:"+indexOfA);
+        var lastIndexofA=value.lastIndexOf('A');
+        //  Console.log("Location of lastIndexOfA:"+lastIndexofA);
+        var splits=value.split(' ');
+        console.log("All Splits");
+        for(var j=0;j<splits.length;j++)
+        {
+            console.log(splits[j]);
+        }
+        var s1=value.substring(0,4);
+        console.log("First 4 chars:"+s1);
+        var s2=value.substring(4,7);
+        Console.log("456 charas:"+s2);
+        var s3=value.substring(5);
+        console.log("From 5th char onwords");
+    }
+</script>

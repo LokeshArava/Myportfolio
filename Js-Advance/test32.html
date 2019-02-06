@@ -1,0 +1,21 @@
+<p id="p1">
+    iam from para1<br>
+    iam from para1<br>
+    iam from para1<br>
+    iam from para1<br>
+</p>
+<hr>
+<p id="p2">
+        iam from para2<br>
+        iam from para2<br>
+        iam from para2<br>
+</p>
+<input type="button" value="Button" onclick="readpara()">
+<hr>
+<script>
+    function readpara()
+    {
+        alert(document.getElementById("p1").innerHTML);
+        alert(document.getElementById("p2").innerHTML);
+    }
+</script>
